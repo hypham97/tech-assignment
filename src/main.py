@@ -99,14 +99,14 @@ def main():
     found_best_station(link_stations, devices)
 
 def cloud_function(request) -> dict:
-    params = request.get_json()
+    params = request.get_json(silent=True)
 
-    if 'sample' in params and params.get('sample') is True:
+    if params and 'sample' in params:
         output = capture_out(sample_data)
         
         return {'statusCode': 200, 'body': output}
     
-    elif 'link-stations' in params and 'devices' in params:
+    elif 'link-stations' and 'devices' in params:
         link_stations: List[LinkStation] = []
         devices: List[Device] = []
 

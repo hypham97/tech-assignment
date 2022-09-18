@@ -5,8 +5,8 @@ locals {
 # Compress source code
 data "archive_file" "source" {
   type        = "zip"
-  source_dir  = "../../../src"
-  output_path = "../../tmp/function-${local.timestamp}.zip"
+  source_dir  = "../src"
+  output_path = "/tmp/function-${local.timestamp}.zip"
 }
 
 # Bucket store source code
