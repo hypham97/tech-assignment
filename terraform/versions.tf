@@ -7,10 +7,8 @@ terraform {
     }
   }
 
-  backend "remote" {
-    organization = "nc"
-    workspaces {
-        name = "tech-assignment"
-    }
-  }  
+  backend "gcs" {
+    bucket  = "tf-state-tech-assignment-362812"
+    prefix  = "terraform/state"
+  }
 }

@@ -1,9 +1,9 @@
-variable "project" {
-  default = "tech-assigment"
-  description = "Project ID"
+variable "project_name" {
+  description = "The project ID where all resources will be launched."
+  type        = string
 }
 
 variable "region" {
-  default = "europe-north1"
-  description = "GCP Region"
+  description = "The location region to deploy the GCP services."
+  type        = string
 }
