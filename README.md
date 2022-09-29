@@ -165,7 +165,7 @@ gcloud projects delete PROJECT_ID
 
 ## ⚙️ CI/CD
 
-The pipelines are meant to check that the build is suitable, and once that is the case, it will deploy the infrastructure to GCP. The backend of choice where the state file is stored is Terraform Cloud, which is integrated in the pipelines. There's no Python linter unfortunately since it's dependency-free.
+The pipelines are meant to check that the build is suitable, and once that is the case, it will deploy the infrastructure to GCP. The backend of choice where the state file is stored is Google Cloud, which is integrated in the pipelines. There's no Python linter unfortunately since it's dependency-free.
 
 The pipelines are set up using [GitHub Actions](https://github.com/features/actions) and are located in `.github/workflows/`.
 
